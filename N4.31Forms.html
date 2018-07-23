@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4.31Forms</title> <!-- User input -->
+</head>
+<body>
+<!-- Form tag:
+ - action = "url to which data is sent"
+ - method = "type of http request" [get (retrieve info) or post (add info)]
+Input tag:
+ - type = "attribute" -->
+ Simple sign-in form
+ <form action="/sign-in-url" method="post"> <!-- method is GET by default if nto specified -->
+ 	
+ 	<label> <!-- Nested Label -->
+ 		Username:
+ 		<input type="text" name="username" placeholder="username" required>
+ 	</label> <!-- "required" stops user from submitting empty field, can also type required="true" -->
+
+ 	<label for="password">Password:</label>
+ 	<input id="password" type="password" placeholder="password">
+ 	
+ 	<input type="color">
+ 	<input type="email" placeholder="email"> <!-- data validation: checks for "@" in emails -->
+ 	<button>Submit</button> <!-- Identical -->
+ 	<input type="Submit">
+ </form> <!-- Combines all elements into one package and sends info -->
+
+NEXT: 4.36
+
+
+<form>
+	<p>What gender do you indentify as</p>
+
+	<label for="Male">Male: </label>
+	<input type="radio" name="Gender" id="male" value="MALE">
+
+	<label for="Female">Female: </label>
+	<input type="radio" name="Gender" id="female" value="FEMALE"> <!-- Same name connects radios -->
+
+	<p>What's your favourite colour</p>
+	<select name="colour"> <!-- Sends info when given "name" -->
+		<option>Red</option>
+		<option>Blue</option>
+		<option>Indigo</option>
+	</select>
+
+	<textarea name="answer" rows="10" cols="50"></textarea> <!-- Size of text input varies -->
+
+	<button>Go!</button> <!-- Last button within form auto-submits -->
+</form>
+
+</body>
+</html>
